@@ -436,7 +436,7 @@ a {
 
 .button-footer .send {
   margin-left: 10px;
-  margin-right: 28px;
+  padding-right: 8px;
 }
 
 .bg-footer {
