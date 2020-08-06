@@ -91,6 +91,21 @@ a {
   text-align: center;
 }
 
+/* header */
+
+.email {
+  width: 20px;
+  height: 15px;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.smartphone {
+  width: 20px;
+  height: 15px;
+  align-items: center;
+  margin-right: 10px;
+}
 /* Hero */
 
 .hero {
@@ -152,12 +167,23 @@ a {
   height: 1.14;
   letter-spacing: 0.02em;
   font-style: normal;
+  align-items: center;
 }
 
 .site-nav .contacts:hover,
 .site-nav .contacts:focus {
   color: var(--accent-color);
 }
+
+/* .contacts::before {
+  content: "";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+
+  background-image: url("../images/icons/envelope.svg");
+  background-size: contain;
+} */
 
 .site-nav {
   display: flex;
@@ -205,6 +231,16 @@ a {
 .about-us.list .item {
   margin-right: 30px;
 }
+
+/* .about-us.list .item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--second-bg-color);
+} */
 
 .about-us .title {
   color: var(--first-title-text-color);
@@ -325,6 +361,32 @@ a {
   margin-right: 10px;
 }
 
+.box-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.box-media:hover {
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
+}
+
+.icon-media {
+  content: "";
+  fill: #afb1b8;
+  block-size: contain;
+}
+
+/* .icon-media:hover {
+} */
+
 /* our clients */
 .section.clients {
   padding-top: 94px;
@@ -340,11 +402,29 @@ a {
   margin-right: 30px;
 }
 
+.company {
+  display: flex;
+  width: 170px;
+  height: 90px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
 /* Footer section */
 
-.button.footer {
-  margin-left: 370px;
-
+.button-footer {
+  margin-left: 360px;
+  width: 200px;
+  height: 50px;
+  padding-left: 29px;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
@@ -352,8 +432,11 @@ a {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  outline: none;
-  border: none;
+}
+
+.button-footer .send {
+  margin-left: 10px;
+  padding-right: 8px;
 }
 
 .bg-footer {
