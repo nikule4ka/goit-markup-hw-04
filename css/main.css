@@ -91,28 +91,19 @@ a {
   text-align: center;
 }
 
-/* header */
-
-.email {
-  width: 20px;
-  height: 15px;
-  align-items: center;
-  margin-right: 10px;
-}
-
-.smartphone {
-  width: 20px;
-  height: 15px;
-  align-items: center;
-  margin-right: 10px;
-}
 /* Hero */
-
 .hero {
   text-align: center;
-  background: rgba(47, 48, 58, 0.8);
+
   padding-top: 200px;
   padding-bottom: 200px;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/Header.jpg);
 }
 
 .hero-title {
@@ -159,6 +150,8 @@ a {
   letter-spacing: 0.02em;
 }
 
+/* header */
+
 .site-nav .contacts {
   color: var(--primary-text-color);
   display: flex;
@@ -168,22 +161,20 @@ a {
   letter-spacing: 0.02em;
   font-style: normal;
   align-items: center;
+  background-color: var(--primary-white-color);
 }
 
-.site-nav .contacts:hover,
-.site-nav .contacts:focus {
-  color: var(--accent-color);
-}
-
-/* .contacts::before {
-  content: "";
-  width: 16px;
-  height: 12px;
+.icon-contacts {
+  width: 20px;
+  height: 15px;
+  align-items: center;
   margin-right: 10px;
+  fill: var(--primary-text-color);
+}
 
-  background-image: url("../images/icons/envelope.svg");
-  background-size: contain;
-} */
+.contacts:hover .icon-contacts {
+  fill: var(--accent-color);
+}
 
 .site-nav {
   display: flex;
@@ -231,16 +222,6 @@ a {
 .about-us.list .item {
   margin-right: 30px;
 }
-
-/* .about-us.list .item::before {
-  display: block;
-  content: "";
-  height: 120px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--second-bg-color);
-} */
 
 .about-us .title {
   color: var(--first-title-text-color);
@@ -319,24 +300,28 @@ a {
 
 /*our team */
 
-.section .team {
-  background-color: var(--second-bg-color);
+.section-team {
   padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--second-bg-color);
 }
 
-.about-us.list .item {
-  background-color: var(--primary-white-color);
+.our-team.list {
+  display: flex;
   padding-bottom: 24px;
 }
 
-.section.team {
-  background-color: var(--second-bg-color);
-  padding-top: 94px;
+.our-team.list .item {
+  background-color: var(--primary-white-color);
+  display: block;
+  width: calc((100%-90px) / 4);
+  margin-right: 30px;
+
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
-.about-us.list {
-  text-align: center;
-}
 .name-team {
   color: var(--first-title-text-color);
   margin-top: 30px;
@@ -359,33 +344,23 @@ a {
 
 .item-links {
   margin-right: 10px;
+  margin-bottom: 24px;
 }
 
 .box-media {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  padding: 0;
-  border: none;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  fill: #afb1b8;
 }
 
 .box-media:hover {
+  border-radius: 50%;
   background-color: var(--accent-color);
   fill: var(--primary-white-color);
 }
-
-.icon-media {
-  content: "";
-  fill: #afb1b8;
-  block-size: contain;
-}
-
-/* .icon-media:hover {
-} */
 
 /* our clients */
 .section.clients {
@@ -408,11 +383,34 @@ a {
   height: 90px;
   align-items: center;
   justify-content: center;
+  fill: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
 
+.company:hover {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
 /* Footer section */
+
+.footer-media {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  fill: #ffffff;
+  background-color: rgba(0, 0, 0, 10%);
+  border-radius: 50%;
+}
+
+.footer-media:hover {
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
+}
 
 .button-footer {
   margin-left: 360px;
@@ -428,7 +426,7 @@ a {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
@@ -436,11 +434,11 @@ a {
 
 .button-footer .send {
   margin-left: 10px;
-  padding-right: 8px;
 }
 
 .bg-footer {
   background-color: var(--bg-color-footer);
+  height: 252px;
 }
 
 .bg-footer .container {
@@ -480,8 +478,8 @@ a {
 }
 
 .container .join {
-  padding-top: 74px;
-  padding-left: 147px;
+  padding-top: 72px;
+  padding-left: 69px;
 }
 
 .links.list {
